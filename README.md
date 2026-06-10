@@ -40,4 +40,32 @@ Answer + Sources
 
 ## Project Status
 
+Add GitHub Actions workflow\
+
+
+## Architecture
+
+```mermaid
+graph TD
+
+A[PDF Upload]
+B[Document Loader]
+C[Chunking]
+D[Embeddings]
+E[ChromaDB]
+F[Retriever]
+G[User Query]
+H[Context Retrieval]
+I[Response Generation]
+
+A --> B
+B --> C
+C --> D
+D --> E
+
+G --> F
+F --> E
+E --> H
+H --> I
+```
 🚀 Currently under active development.
